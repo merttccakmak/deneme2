@@ -1,0 +1,42 @@
+
+        static void Main(string[] args)
+        {
+            Ogrenci ogrenci = new Ogrenci("Mert", "Çakmak", 20, "221903549");
+            Calisan calisan = new Calisan("Mustafa", "Bal", 44, "Doktor", 9500);
+        }
+
+        public class Musteri
+        {
+            protected string ad;
+            protected string soyad;
+            protected int yas;
+
+            public Musteri(string adi, string soyadi, int yasi)
+            {
+                ad = adi;
+                soyad = soyadi;
+                yas = yasi;
+            }
+        }
+public class Ogrenci: Musteri
+        {
+            string ogrenciNo;
+            public Ogrenci(string adi, string soyadi, int yasi, string no) : base(adi,soyadi,yasi)
+            {
+                ogrenciNo = no;
+            }
+
+        }
+
+
+        public class Calisan : Musteri
+        {
+            string meslek;
+            int maas;
+            public Calisan(string adi, string soyadi, int yasi, string meslegi, int maasi) : base(adi,soyadi,yasi)
+            {
+                meslek = meslegi;
+                maas = maasi;
+            }
+
+        }
