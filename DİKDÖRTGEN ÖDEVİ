@@ -1,0 +1,32 @@
+static void Main(string[] args)
+    {
+        Dikdortgen dikdortgen1 = new Dikdortgen(7, 5);
+        Dikdortgen dikdortgen2 = new Dikdortgen(7, 5);
+
+        Console.WriteLine($"Diktortgen 1 icin Cevre:{dikdortgen1.CevreHesapla()} ve Alan:{dikdortgen1.AlanHesapla()}");
+
+       
+
+        
+    }
+
+    public class Dikdortgen
+    {
+        private int b;
+        private int h;
+
+        public Dikdortgen(int boy, int yukseklik)
+        {
+            b = boy;
+            h = yukseklik;
+        }
+
+        public int AlanHesapla()
+        {
+            return b * h;
+        }
+        public int CevreHesapla()
+        {
+            return 2 * (b + h);
+        }
+    }
